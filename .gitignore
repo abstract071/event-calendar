@@ -1,0 +1,6 @@
+.idea
+/dist
+/node_modules
+/styles
+npm-debug.log
+/public/js

@@ -1,0 +1,84 @@
+@import "./partials/mixins";
+@import "./partials/variables";
+
+
+/*****************************************************
+* Basic Layout
+*****************************************************/
+
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+
+  header {
+    padding: 10px 0;
+
+    .btn {
+      margin-right: 10px;
+    }
+  }
+
+  .container {
+    padding: 20px;
+    font-size: $font-size;
+    width: 310px;
+  }
+
+  .calendar {
+    position: relative;
+  }
+
+  form {
+    margin-bottom: 10px;
+  }
+
+  .btn-export {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+  }
+}
+
+
+/*****************************************************
+* Event Component
+*****************************************************/
+
+
+.time-section:nth-child(2n + 1) {
+  border-top: $hour-border;
+}
+
+.time-section:nth-child(2n) .time {
+  font-size: $font-size - 4;
+}
+
+.time-section {
+  height: 60px;
+  box-sizing: border-box;
+
+  .time {
+    padding: 0 10px;
+  }
+}
+
+.events-holder {
+  position: absolute;
+  top: 0;
+  left: 70px;
+
+  .event {
+    position: absolute;
+    padding: 5px;
+    max-width: 200px;
+    background-color: $event-background;
+    border-left: $event-border;
+    box-sizing: border-box;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+}
